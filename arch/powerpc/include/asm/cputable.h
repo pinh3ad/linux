@@ -439,7 +439,6 @@ extern const char *powerpc_base_platform;
 #define CPU_FTRS_XENON (CPU_FTR_USE_TB | CPU_FTR_LWSYNC | \
 	    CPU_FTR_PPCAS_ARCH_V2 | CPU_FTR_CTRL | \
 	    CPU_FTR_MMCRA | CPU_FTR_SMT | \
-	    CPU_FTR_CI_LARGE_PAGE | \
 	    CPU_FTR_CELL_TB_BUG )
 #define CPU_FTRS_PA6T (CPU_FTR_USE_TB | CPU_FTR_LWSYNC | \
 	    CPU_FTR_PPCAS_ARCH_V2 | CPU_FTR_ALTIVEC_COMP | \
