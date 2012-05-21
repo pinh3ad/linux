@@ -344,4 +344,8 @@ config VMXNET3
 
 source "drivers/net/hyperv/Kconfig"
 
+config XENON_ENET
+	tristate "Xenon Fast Ethernet Adapter support"
+	depends on NET_PCI && PCI
+
 endif # NETDEVICES

@@ -26,6 +26,7 @@ obj-$(CONFIG_VIRTIO_NET) += virtio_net.o
 # Networking Drivers
 #
 obj-$(CONFIG_ARCNET) += arcnet/
+obj-$(CONFIG_XENON_ENET) += xenon_net.o
 obj-$(CONFIG_DEV_APPLETALK) += appletalk/
 obj-$(CONFIG_CAIF) += caif/
 obj-$(CONFIG_CAN) += can/

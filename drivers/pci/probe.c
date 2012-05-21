@@ -994,6 +994,8 @@ int pci_setup_device(struct pci_dev *dev)
 	struct pci_bus_region region;
 	struct resource *res;
 
+	printk("pci_setup_device() [%p,%u,%04x:%04x]\n",
+		dev->bus, dev->devfn, dev->vendor, dev->device);
 	if (pci_read_config_byte(dev, PCI_HEADER_TYPE, &hdr_type))
 		return -EIO;
 
@@ -1222,6 +1224,8 @@ bool pci_bus_read_dev_vendor_id(struct pci_bus *bus, int devfn, u32 *l,
 				 int crs_timeout)
 {
 	int delay = 1;
+
+	printk("pci_scan_device(%p,%u) bus->ops=%p\n", bus, devfn, bus ? bus->ops : 0);
 
 	if (pci_bus_read_config_dword(bus, devfn, PCI_VENDOR_ID, l))
 		return false;
